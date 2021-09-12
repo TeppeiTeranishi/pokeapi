@@ -39,7 +39,6 @@ h1{
     background-image: url("./img-back.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
 }
 
 .pokemon-block p{
