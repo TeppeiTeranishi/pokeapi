@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(
+    90deg, 
+    rgba(2,0,36,1) 0%, 
+    rgba(139,0,71,1) 35%, 
+    rgba(0,212,255,1) 100%);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    color: #e5e4e2;
+}
+
+.poke-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    width: 80%;
+    margin: 20px auto 40px auto;
+}
+
+.pokemon-block,
+.pokemon-block-back{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #e5e4e2;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.img-container{
+    background-image: url("./img-back.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.pokemon-block p{
+    margin: 5px;
+}
+
+.name{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#spinner{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.pagination{
+    width: 90%;
+    margin: 0 auto 50px;
+}
+
+.card-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .card-container{
+    transform: rotateY(180deg);
+}
+
+.pokemon-block,
+.pokemon-block-back{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.pokemon-block-back{
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0%;
+}
+
+.stat-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+}
